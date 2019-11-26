@@ -1,0 +1,62 @@
+@import 'reset.scss';
+@import '../../../assets/fonts/transfonter.org-20191126-040057/stylesheet.css';
+$desktop-size: 1240px;
+@mixin desktop {
+    @media (min-width: $desktop-size) {
+        @content;
+    }
+}
+
+$tablet-size: 600px;
+@mixin tablet {
+    @media (min-width: $tablet-size) {
+        @content;
+    }
+}
+
+$mobile-size: 480px;
+@mixin mobile {
+    @media (min-width: $mobile-size) {
+        @content;
+    }
+}
+
+body {
+    background-color: black;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    margin-top: 150px;
+}
+
+p {
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+select {
+    background-color: white;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #c2c2c2;
+    margin-top: 120%;
+}
+
+.articles {
+    width: 100vw;
+    li {
+        position: relative;
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            background-color: gray;
+        }
+    }
+}

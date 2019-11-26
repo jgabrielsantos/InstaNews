@@ -5,16 +5,36 @@
     <meta lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="assets/images/nyt-logo.svg">
+    <link rel="stylesheet" href="../build/css/main.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <title>Insta News</title>
 </head>
 
 <body>
-    <div class="logo">
-        <img src="assets/images/nyt-logo.svg" alt="New York Times Logo">
-    </div>
+    <main>
+        <div class="image">
+            <img src="assets/images/nyt-logo.svg" alt="New York Times Logo">
+        </div>
+        <div class="sections">
+            <p>Choose a section:</p>
+            <select name="Sections">
+                <option value="" selected disabled>Sections ...</option>
+                <option value="arts" id="Arts">Arts</option>
+                <option value="food" id="Food">Food</option>
+                <option value="health" id="Health">Health</option>
+                <option value="politics" id="Politics">Politics</option>
+                <option value="science" id="Science">Science</option>
+                <option value="sports" id="Sports">Sports</option>
+                <option value="wheather" id="Wheater">Wheather</option>
+                <option value="world" id="World">World</option>
+            </select>
+            <ul class="articles"></ul>
+        </div>
+    </main>
+    <footer>
+        <h2>© Copyright 2016 INSTANEWS</h2>
+    </footer>
+    <script src="./build/js/index.min.js" type="module"></script>
 </body>
 
 </html>
