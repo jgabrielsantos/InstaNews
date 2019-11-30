@@ -25,34 +25,50 @@ body {
     background-color: black;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     align-items: center;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100vh;
 }
 
-.image {
-    margin-top: 150px;
+main {
+    grid-row: 1;
+    img {
+        margin: 40px 0;
+    }
+    .section {
+        select {
+            margin: 20px 0;
+        }
+    }
 }
 
-p {
-    color: #ffffff;
-    margin-top: 20px;
+.sections {
+    p {
+        color: #ffffff;
+    }
+    select {
+        background-color: white;
+        margin-top: 10px;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
 }
 
-select {
-    background-color: white;
-    margin-top: 20px;
-}
-
-h2 {
-    color: #c2c2c2;
-    margin-top: 120%;
+footer {
+    grid-row: 3;
+    display: grid;
+    h2 {
+        color: #c2c2c2;
+    }
 }
 
 .articles {
-    width: 100vw;
     li {
         position: relative;
+        img {
+            width: 100vw;
+        }
         figcaption {
             position: absolute;
             bottom: 0;

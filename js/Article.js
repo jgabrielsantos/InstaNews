@@ -8,7 +8,6 @@ export default class Article {
 
     render() {
         const articles = $('.articles');
-        console.log(this);
-        articles.append('<li class="article" ><a href=' + this.link + '"target="_blank><img src="' + this.image + '" alt=""></a><figcaption>' + this.description + '</figcaption></li>');
+        articles.append('<li class="article"> <a href=' + this.link + '"target="_blank> <img src="' + this.image + '" alt=""> </a> <figcaption>' + this.description + '</figcaption> </li>');
     }
 }
