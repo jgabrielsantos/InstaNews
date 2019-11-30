@@ -15,16 +15,19 @@ $('select').on('change', function(event) {
             console.log(data);
             $('.articles').html('');
             let articles = [];
-            for (let i = 0; i < 12; i++) {
-                articles.push(new Article(data.results[i].url, data.results[i].multimedia[4].url, data.results[i].abstract));
-                // newArticle.render();
-            }
-            if (articles.length < 13) {
-                for (let i = 0; i < articles.length; i++) {
-                    articles[i].render()
+            for (let i = 0; i < data.results.length; i++) {
+                if (data.results[i].multimedia.length >= 5) {
+                    articles.push(new Article(data.results[i].url, data.results[i].multimedia[4].url, data.results[i].abstract));
                 }
-
             }
+            for (let i = 0; i < articles.length; i++) {
+                if (i <= 12) {
+                    articles[i].render();
+                } else {
+                    break;
+                }
+            }
+
 
         })
 })
