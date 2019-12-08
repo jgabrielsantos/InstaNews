@@ -33,12 +33,16 @@ body {
 
 main {
     grid-row: 1;
+    @include tablet {
+        grid-row: 2;
+        display: flex;
+        align-items: center;
+        margin-left: 5%;
+    }
     img {
         margin: 40px 0;
-    }
-    .section {
-        select {
-            margin: 20px 0;
+        @include tablet {
+            margin-left: 20%;
         }
     }
 }
@@ -49,15 +53,16 @@ main {
     }
     select {
         background-color: white;
-        margin-top: 10px;
         border: 2px solid white;
         border-radius: 5px;
+        margin-top: 10px;
     }
 }
 
 footer {
     grid-row: 3;
     display: grid;
+    margin-top: 30%;
     h2 {
         color: #c2c2c2;
     }
@@ -66,8 +71,8 @@ footer {
 .articles {
     margin: 20px 0;
     li {
-        margin: 10px 0;
         position: relative;
+        margin: 10px 0;
         img {
             width: 100vw;
         }
