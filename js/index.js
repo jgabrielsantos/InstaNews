@@ -7,6 +7,11 @@ const urlEnd = '.json?api-key=UjLlKw2z0c4neE3VRLpDc60FHI981TfF';
 $('select').on('change', function(event) {
     let option = event.target.value;
 
+    $('main').addClass('after-click-main');
+    $('img').addClass('after-click-image');
+    $('.sections').addClass('after-click-sections');
+    $('footer').addClass('after-click-footer');
+
     $.ajax({
             method: 'GET',
             url: urlStart + option + urlEnd,
