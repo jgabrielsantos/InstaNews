@@ -32,7 +32,5 @@ $('select').on('change', function(event) {
                     break;
                 }
             }
-
-
         })
 })
