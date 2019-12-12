@@ -52,7 +52,7 @@ main {
 // Classes add with JavaScript
 .after-click-main {
     margin: 0;
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .after-click-image {
@@ -65,7 +65,7 @@ main {
         margin-left: 3%;
         width: 5%;
     }
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .sections {
@@ -100,7 +100,7 @@ main {
     @include desktop {
         margin-left: 7%;
     }
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .articles {
@@ -156,5 +156,5 @@ footer {
     @include desktop {
         margin: 2% 0 3.5% 2%;
     }
-    transition: all 1s;
+    transition: all 2s;
 }
