@@ -12,14 +12,19 @@ $('select').on('change', function(event) {
     $('.sections').addClass('after-click-sections');
     $('footer').addClass('after-click-footer');
 
+    $('ul').removeClass('after-click-articles');
+
     $.ajax({
             method: 'GET',
             url: urlStart + option + urlEnd,
         })
         .done(function(data) {
-            console.log(data);
+            $('ul').addClass('after-click-articles');
+
             $('.articles').html('');
+            console.log(data.results.filter((result) => result.multimedia.length < 5));
             let articles = [];
+
             for (let i = 0; i < data.results.length; i++) {
                 if (data.results[i].multimedia.length >= 5) {
                     articles.push(new Article(data.results[i].url, data.results[i].multimedia[4].url, data.results[i].abstract));
