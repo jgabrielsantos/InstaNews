@@ -12,4 +12,12 @@ Single page, responsive website that allows a user to filter top news story cate
 2. Learn to use SCSS
 3. Better understanding of OOP
 
+# Try yourself! 
+1. Go to the NYT API page (https://developer.nytimes.com/) and sign in
+2. Generate a new API Key
+3. Create a config.js file in the main directory of the project
+4. Create a new variable inside the config.js with the name MY_KEY
+5. Import this variable to the index.js
+6. Enjoy your news!
+
 **Made by João Gabriel Carvalho Leite Santos**
