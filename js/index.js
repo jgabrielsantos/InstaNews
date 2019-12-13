@@ -20,6 +20,7 @@ $('select').on('change', function(event) {
         })
         .done(function(data) {
             $('ul').addClass('after-click-articles');
+            $('.gif').removeClass('.loading');
             $('.articles').html('');
 
             let articles = [],
@@ -29,11 +30,20 @@ $('select').on('change', function(event) {
                 if (data.results[j].multimedia.length >= 5) {
                     // append the articles
                     articles.push(new Article(data.results[j].url, data.results[j].multimedia[4].url, data.results[j].abstract));
+                    // display the articles
                     articles[i].render();
                     i++;
                 }
                 j++;
             }
+            $('.loading').addClass('.loading');
 
+        })
+        .fail(function() {
+            $('.articles').append(`
+                <li class = "error">
+                    <h1>Fail to load news... Try again!</h1>
+                </li>
+            `);
         })
 })

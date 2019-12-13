@@ -68,6 +68,11 @@ main {
     transition: all 1.5s;
 }
 
+.loading {
+    position: absolute;
+    display: none;
+}
+
 .sections {
     @include tablet {
         display: flex;
@@ -168,5 +173,12 @@ li:hover {
     figcaption {
         opacity: 0;
         transition: all 0.5s;
+    }
+}
+
+.error {
+    width: 100vw;
+    h1 {
+        color: #ffffff;
     }
 }
