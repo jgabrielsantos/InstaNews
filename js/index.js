@@ -20,22 +20,20 @@ $('select').on('change', function(event) {
         })
         .done(function(data) {
             $('ul').addClass('after-click-articles');
-
             $('.articles').html('');
-            console.log(data.results.filter((result) => result.multimedia.length < 5));
-            let articles = [];
 
-            for (let i = 0; i < data.results.length; i++) {
-                if (data.results[i].multimedia.length >= 5) {
-                    articles.push(new Article(data.results[i].url, data.results[i].multimedia[4].url, data.results[i].abstract));
-                }
-            }
-            for (let i = 0; i < articles.length; i++) {
-                if (i <= 12) {
+            let articles = [],
+                i = 0,
+                j = 0;
+            while (i < 12) {
+                if (data.results[j].multimedia.length >= 5) {
+                    // append the articles
+                    articles.push(new Article(data.results[j].url, data.results[j].multimedia[4].url, data.results[j].abstract));
                     articles[i].render();
-                } else {
-                    break;
+                    i++;
                 }
+                j++;
             }
+
         })
 })
