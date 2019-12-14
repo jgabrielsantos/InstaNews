@@ -3,8 +3,10 @@ import Article from './Article.min.js';
 const urlStart = 'https://api.nytimes.com/svc/topstories/v2/';
 const urlEnd = '.json?api-key=UjLlKw2z0c4neE3VRLpDc60FHI981TfF';
 
+$('.loader').hide();
 
 $('select').on('change', function(event) {
+    $('.loader').show();
     let option = event.target.value;
 
     $('main').addClass('after-click-main');
@@ -15,12 +17,12 @@ $('select').on('change', function(event) {
     $('ul').removeClass('after-click-articles');
 
     $.ajax({
+
             method: 'GET',
             url: urlStart + option + urlEnd,
         })
         .done(function(data) {
             $('ul').addClass('after-click-articles');
-            $('.gif').removeClass('.loading');
             $('.articles').html('');
 
             let articles = [],
@@ -36,8 +38,7 @@ $('select').on('change', function(event) {
                 }
                 j++;
             }
-            $('.loading').addClass('.loading');
-
+            $('.loader').hide();
         })
         .fail(function() {
             $('.articles').append(`
@@ -45,5 +46,5 @@ $('select').on('change', function(event) {
                     <h1>Fail to load news... Try again!</h1>
                 </li>
             `);
-        })
+        });
 })

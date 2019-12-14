@@ -68,11 +68,6 @@ main {
     transition: all 1.5s;
 }
 
-.loading {
-    position: absolute;
-    display: none;
-}
-
 .sections {
     @include tablet {
         display: flex;
@@ -108,6 +103,11 @@ main {
     transition: all 1.5s;
 }
 
+.loader {
+    width: 5%;
+    margin-left: 15%;
+}
+
 .articles {
     margin-right: 100%;
 }
@@ -132,6 +132,7 @@ main {
             bottom: 0;
             color: white;
             background-color: rgba(0, 0, 0, 0.7);
+            transition: all 1.5s;
         }
     }
     transition: all 1.5s;
