@@ -28,11 +28,11 @@ body {
 }
 
 main {
-    margin: 25% 0;
+    margin: 15% 0;
     @include tablet {
         display: flex;
         align-items: center;
-        margin-top: 40%;
+        margin-top: 10%;
     }
     @include desktop {
         margin: 10% 0 0 0;
@@ -133,6 +133,9 @@ main {
             color: white;
             background-color: rgba(0, 0, 0, 0.7);
             transition: all 1.5s;
+            text-align: left;
+            padding: 8px;
+            line-height: 1.2; 
         }
     }
     transition: all 1.5s;
@@ -145,17 +148,18 @@ main {
         display: flex;
         align-items: flex-end;
         text-decoration: none;
+        color: white;
     }
 }
 
 footer {
-    margin-top: 40%;
+    margin-top: 30%;
     @include tablet {
-        margin-top: 48%;
+        margin-top: 20%;
     }
     @include desktop {
         display: flex;
-        margin: 6% 0 0 3%;
+        margin: 15% 0 0 3%;
     }
     h2 {
         color: #c2c2c2;

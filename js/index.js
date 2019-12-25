@@ -5,7 +5,7 @@ const urlEnd = '.json?api-key=UjLlKw2z0c4neE3VRLpDc60FHI981TfF';
 
 $('.loader').hide();
 
-$('select').on('change', function(event) {
+$('select').on('change', function (event) {
     $('.loader').show();
     let option = event.target.value;
 
@@ -13,15 +13,17 @@ $('select').on('change', function(event) {
     $('img').addClass('after-click-image');
     $('.sections').addClass('after-click-sections');
     $('footer').addClass('after-click-footer');
-
     $('ul').removeClass('after-click-articles');
+
+    // remove error message
+    $('.error').remove();
 
     $.ajax({
 
-            method: 'GET',
-            url: urlStart + option + urlEnd,
-        })
-        .done(function(data) {
+        method: 'GET',
+        url: urlStart + option + urlEnd,
+    })
+        .done(function (data) {
             $('ul').addClass('after-click-articles');
             $('.articles').html('');
 
@@ -40,11 +42,12 @@ $('select').on('change', function(event) {
             }
             $('.loader').hide();
         })
-        .fail(function() {
+        .fail(function () {
             $('.articles').append(`
                 <li class = "error">
                     <h1>Fail to load news... Try again!</h1>
                 </li>
             `);
+            $('.loader').hide();
         });
 })
