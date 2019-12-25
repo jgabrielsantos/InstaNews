@@ -15,6 +15,9 @@ $('select').on('change', function (event) {
     $('footer').addClass('after-click-footer');
     $('ul').removeClass('after-click-articles');
 
+    // remove error message
+    $('.error').remove();
+
     $.ajax({
 
         method: 'GET',
