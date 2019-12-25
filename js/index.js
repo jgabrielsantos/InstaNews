@@ -1,7 +1,7 @@
 import Article from './Article.min.js';
 
 const urlStart = 'https://api.nytimes.com/svc/topstories/v2/';
-const urlEnd = '.json?api-keyE3VRLpDc60FHI981TfF';
+const urlEnd = '.json?api-key=UjLlKw2z0c4neE3VRLpDc60FHI981TfF';
 
 $('.loader').hide();
 
