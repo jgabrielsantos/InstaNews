@@ -20,4 +20,6 @@ Single page, responsive website that allows a user to filter top news story cate
 5. Import this variable to the index.js
 6. Enjoy your news!
 
+![Homepage Screenshot](Homepage_Screenshot.png)
+
 **Made by João Gabriel Carvalho Leite Santos**
